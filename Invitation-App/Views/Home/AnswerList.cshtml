@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Answer List</title>
+</head>
+<body>
+    <h3>Accepting The Invitation</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Email</th>
+                <th>Phone</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(Invitation_App.Models.Answer x in Model)
+            {
+                <tr>
+                    <td>@x.Name</td>
+                    <td>@x.Surname</td>
+                    <td>@x.Email</td>
+                    <td>@x.Phone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

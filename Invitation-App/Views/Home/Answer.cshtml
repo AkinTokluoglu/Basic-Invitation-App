@@ -1,0 +1,51 @@
+﻿@model Invitation_App.Models.Answer;
+
+@{
+    Layout = null;
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Invitation App</title>
+    
+</head>
+<body>
+    <form asp-action="Answer" method="post">
+        <div asp-validation-summary="All"></div>
+
+        <div>
+            <label asp-for="Name">Name: </label>
+            <input asp-for="Name"/>
+        </div>
+        
+        <div>
+            <label asp-for="Surname">Surname: </label>
+            <input asp-for="Surname"/>
+        </div>
+
+        <div>
+            <label asp-for="Email">Email: </label>
+            <input asp-for="Email"/>
+        </div>
+
+        <div>
+            <label asp-for="Phone">Phone: </label>
+            <input asp-for="Phone" />
+        </div>
+
+        <div>
+            <label >Your Answer: </label>
+            <select asp-for="YourAnswer">
+            <option value="">Are Coming The Match?</option>
+            <option value="True">Yes</option>
+            <option value="False">No</option>
+            </select>
+        </div>
+        <button type="submit">Save</button>
+       
+    </form>
+    
+</body>
+</html>
